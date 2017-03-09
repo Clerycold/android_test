@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" type="text/css"  />
+    <!-- href="css/index.css"可放置上面link 去連結index.css -->
+    <title>InputData</title>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/dataTransportJs.js"></script>
+
+    <style> h4 {color:red;text-decoration:underline;}
+            .h2 {color:green;font-style:italic;}
+            .h2 input[type="text"] {border:2px solid blue;}
+            .font-blue{color:blue;}
+            h3 {color:green;border}
+            #box{color:green;border:2px solid green;}
+            </style>
+</head>
+
+<body>
+<h4 align="center">
+    <label for="name"> Name: </label>
+    <input style="border:2px solid red;" type="text" name="input" id="name" value="" />
+</h4>
+<p class='h2 font-blue' align="center">
+    <label for="name">  Number: </label>
+    <input type="text" name="input" id="Number" value="" />
+</p>
+<h3 align="center">
+    <label for="name"> Age: </label>
+    <input style="border:2px solid green;" type="text" name="input" id="Age" value="" />
+</h3>
+<div style="text-align:center;padding:0 5%;">
+    <button id="Enter" style="width:100%;">Enter</button>
+</div>
+<div style="text-align:center;padding:0 5%;">
+    <button id="GetScreen" style="width:100%;">getScreen</button>
+</div>
+<div style="text-align:center;padding:0 5%;">
+    <button id="FacebookId" style="width:100%;">FaceBookId</button>
+</div>
+<div style="text-align:center;padding:0 5%;">
+    <button id="GoolgoeId" style="width:100%;">GoogleId</button>
+</div>
+<input type="hidden" id="msg" />
+</body>
+</html>

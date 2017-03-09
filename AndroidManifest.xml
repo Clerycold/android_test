@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest android:hardwareAccelerated="true" android:versionCode="1" android:versionName="0.0.1" package="com.test.hybird" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application android:hardwareAccelerated="true" android:icon="@drawable/icon" android:label="@string/app_name" android:supportsRtl="true">
+        <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" android:label="@string/activity_name" android:launchMode="singleTop" android:name=".NativeMainActivity" android:theme="@android:style/Theme.DeviceDefault.NoActionBar" android:windowSoftInputMode="adjustResize">
+            <intent-filter android:label="@string/launcher_name">
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".TestCordovaWithLayoutActivity"/>
+        <activity android:name=".dataListActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ActivityTourTeach.TourTeach"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ActivityQRcodeScanner.BarcodeScanner"/>
+        <activity android:name=".contectLogin.LoginMainActivity"/>
+        <activity android:name=".contectLogin.LoginGoogleMain" android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".contectLogin.LoginLineMain"
+            android:theme="@style/Transparent"/>
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name="jp.line.android.sdk.activity.LineAuthCompleteActivity"
+            android:configChanges="keyboard|orientation"
+            android:exported="true"
+            android:screenOrientation="sensor">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="line.1500209302" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="jp.line.android.sdk.activity.WebLoginActivity"
+            android:configChanges="keyboard|orientation"
+            android:exported="false"
+            android:screenOrientation="sensor"/>
+
+        <meta-data
+            android:name="jp.line.sdk.ChannelId"
+            android:value="1500209302" />
+        <meta-data
+            android:name="jp.line.sdk.AuthScheme"
+            android:value="line.1500209302" />
+
+    </application>
+    <provider android:authorities="com.facebook.app.FacebookContentProvider403690903356458"
+        android:name="com.facebook.FacebookContentProvider"
+        android:exported="true"/>
+    <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="23" />
+</manifest>
